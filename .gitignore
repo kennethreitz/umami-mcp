@@ -1,0 +1,14 @@
+# Bytecode, virtualenvs, and local secrets
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+dist/
+*.egg-info/
+.env
+.python-version
+
+# Fetched reference pages, not part of the server
+agent-tools/
