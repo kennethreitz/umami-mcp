@@ -1,5 +1,7 @@
 # Umami MCP
 
+Repository: https://github.com/kennethreitz/umami-mcp
+
 A read-only [MCP](https://modelcontextprotocol.io) server for [Umami](https://umami.is). An assistant can list your websites and read stats, pageviews, breakdowns, active visitors, and events.
 
 It speaks **stdio** for a local client and **streamable HTTP** for a hosted one. HTTP mode refuses to start unless `MCP_AUTH_TOKEN` is set.
@@ -182,3 +184,9 @@ Checked against the Umami docs on docs.umami.is (the current reference) and the 
 **Rate limit.** Cloud docs say 50 calls per API key every 15 seconds. A 429 is returned as a tool error. This was not measured.
 
 **Login.** `POST /api/auth/login` with `{ "username", "password" }` returns `{ "token", "user" }`. A body with `requiresTwoFactor` and no token stops with a message to use an API key. The `/api/2fa/verify` step is not implemented.
+
+## License
+
+Copyright 2026 Kenneth Reitz.
+
+[umami-mcp](https://github.com/kennethreitz/umami-mcp) is licensed under the Apache License, Version 2.0. The full text is in [LICENSE](LICENSE).
