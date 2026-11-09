@@ -21,7 +21,7 @@ RUN apt-get update \
     && useradd --create-home --uid 10001 app
 
 COPY --from=uv /uv /uvx /bin/
-COPY pyproject.toml uv.lock README.md ./
+COPY pyproject.toml uv.lock README.md LICENSE ./
 COPY src ./src
 
 RUN uv sync --frozen --no-dev \
